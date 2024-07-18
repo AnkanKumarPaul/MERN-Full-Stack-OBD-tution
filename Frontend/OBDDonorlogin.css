@@ -1,0 +1,82 @@
+.h1donorlogin {
+    text-align: center;
+    /* margin-top: 3%; */
+    font-size: xx-large;
+    font-weight: bolder;
+    color: brown;
+}
+
+.tabledonorlogin {
+    background-color: rgba(2, 133, 255, 0.486);
+    width: 45%;
+    margin-left: 27%;
+    margin-top: 5%;
+    padding: 10px;
+    border: solid;
+    border-color: rgb(0, 255, 76);
+    text-align: center;
+    border-radius: 30%;
+}
+
+.tableheadlogindonor {
+    text-align: center;
+    color: yellow;
+    font-size: larger;
+}
+
+.registrationSwitchlogin {
+    text-align: center;
+    margin-top: 2%;
+}
+
+.donorregisterlogin {
+    list-style: none;
+    /* margin: 0 23px; */
+    margin-top: 4%;
+    cursor: pointer;
+    text-decoration: none;
+    color: rgb(0, 255, 76);
+    background: #939393;
+    font-size: larger;
+    font-family: cursive;
+}
+
+.donorregisterlogin:hover {
+    color: #939393;
+    font-size: xx-large;
+    background: rgb(0, 255, 76);
+    font-family: fantasy;
+}
+
+.donorregisterforget {
+    list-style: none;
+    /* margin: 0 23px; */
+    margin-top: 4%;
+    cursor: pointer;
+    text-decoration: none;
+    color: red;
+    background: white;
+    font-size: larger;
+    font-family: cursive;
+}
+
+.donorregisterforget:hover {
+    color: white;
+    font-size: xx-large;
+    background: red;
+    font-family: fantasy;
+}
+
+.donorloginshowhide {
+    text-decoration: none;
+    color: white;
+    margin-left: 1%; 
+    font-size: larger;
+    cursor: pointer;
+}
+
+.donorloginshowhide:hover {
+    text-decoration: none;
+    color: white;
+    font-size: x-large;
+} 

@@ -1,0 +1,93 @@
+.h1login {
+    text-align: center;
+    /* margin-top: 3%; */
+    font-size: xx-large;
+    font-weight: bolder;
+    color: brown;
+}
+
+.tablelogin {
+    background-color: rgba(78, 188, 5, 0.493);
+    width: 45%;
+    margin-left: 27%;
+    margin-top: 5%;
+    padding: 10px;
+    border: solid;
+    border-color: blue;
+    text-align: center;
+    border-radius: 30%;
+}
+
+.tableheadlogin {
+    text-align: center;
+    color: yellow;
+    font-size: larger;
+}
+
+.registrationSwitchlogin {
+    text-align: center;
+    margin-top: 2%;
+}
+
+.userregisterlogin {
+    list-style: none;
+    /* margin: 0 23px; */
+    margin-top: 4%;
+    cursor: pointer;
+    text-decoration: none;
+    color: rgb(17, 0, 255);
+    background: #939393;
+    font-size: larger;
+    font-family: cursive;
+}
+
+.userregisterlogin:hover {
+    color: #939393;
+    font-size: xx-large;
+    background: rgb(17, 0, 255);
+    font-family: fantasy;
+}
+
+.userregisterforget {
+    list-style: none;
+    /* margin: 0 23px; */
+    margin-top: 4%;
+    cursor: pointer;
+    text-decoration: none;
+    color: red;
+    background: white;
+    font-size: larger;
+    font-family: cursive;
+}
+
+.userregisterforget:hover {
+    color: white;
+    font-size: xx-large;
+    background: red;
+    font-family: fantasy;
+}
+
+.showHideuser {
+    margin-left: 1%;
+    font-size: larger;
+    cursor: pointer;
+}
+
+.showHideuser:hover {
+    font-size: x-large;
+    color: brown;
+}
+
+.userloginshowhide {
+    text-decoration: none;
+    color: white;
+    margin-left: 1%;
+    font-size: larger;
+    cursor: pointer;
+}
+
+.userloginshowhide:hover {
+    text-decoration: none;
+    color: white;
+    font-size: x-large;
+}
