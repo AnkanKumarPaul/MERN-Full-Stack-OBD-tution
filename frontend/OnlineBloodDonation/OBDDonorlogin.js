@@ -34,7 +34,7 @@ function OBDDonorlogin() {
             body: JSON.stringify(new_Donor)
         };
 
-        const response = await fetch('http://localhost:5000/logindonor', requestOptions);
+        const response = await fetch('https://mern-full-stack-obd-tution-backend.onrender.com/logindonor', requestOptions);
         const data = await response.json();
 
         if (data.message == true) {
