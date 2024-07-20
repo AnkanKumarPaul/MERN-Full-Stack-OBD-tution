@@ -1,0 +1,40 @@
+.edittableuser {
+    background-color: #7a00fd8e;
+    /* text-align: center; */
+    margin-left: 40%;
+    text-align: center;
+    /* padding: 10%; */
+    width: 30%;
+    margin-top: 5%;
+    border: solid;
+    border-radius: 10px;
+    border-color: rgb(0, 255, 4);
+    /* padding: 15px 20px; */
+    border-width: 4px;
+    /* width: 10%; */
+}
+
+.tableheadedituser {
+    color: rgb(0, 135, 169);
+    background-color: rgba(255, 255, 255, 0.653);
+    text-align: center;
+}
+
+.editusershowhide {
+    text-decoration: none;
+    color: white;
+    margin-left: 1%;
+    font-size: larger;
+    cursor: pointer;
+}
+
+.editusershowhide:hover {
+    text-decoration: none;
+    color: white;
+    font-size: x-large;
+}
+
+.editsaveuser {
+    /* text-align: center; */
+    /* margin-left: 40%; */
+}

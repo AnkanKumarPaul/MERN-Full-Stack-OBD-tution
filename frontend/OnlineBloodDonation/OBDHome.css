@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.sliderpic1 {
+    height: 30vw;
+}
+
+.image-container {
+    float: left;
+    margin-left: 10%;
+}
+
+.image-containertwo {
+    float: left;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+.card-title {
+    color: blue;
+    font-weight: bolder;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.card-textone {
+    color: green;
+    font-weight: 450;
+}
+
+.card-texttwo {
+    color: green;
+    font-size: small;
+}
+
+.card-textthree {
+    color: green;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.text {
+    text-align: center;
+    z-index: 10;
+    color: red;
+}
+
+.Previous {
+    color: rgb(10, 12, 10);
+    font-size: large;
+    margin-left: 1%;
+}
+
+.Previous:hover {
+    color: rgb(10, 12, 10);
+    font-size: xx-large;
+}
+
+.gonext {
+    color: rgb(11, 11, 11);
+    font-size: large;
+    margin-right: 2%;
+}
+
+.gonext:hover {
+    color: rgb(11, 11, 11);
+    font-size: xx-large;
+}
+
+.message {
+    color: red;
+    font-size: large;
+    font-family: cursive;
+    font-weight: 800;
+    margin-left: 15%;
+    background-color: #eaff00ab;
+    /* width: 100vw; */
+}
+
+/* .footer {
+    display: flex;
+    padding: 2px 1px;
+    justify-content: space-evenly;
+    height: 60vh;
+    background-color: rgba(7, 197, 0, 0.596);
+    margin-top: 20%;
+}
+
+footer ul li {
+    list-style: none;
+    margin: 0 23px;
+    cursor: pointer;
+
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: white;
+
+}
+
+.footer-first h3 {
+    margin-left: 20%;
+    margin-top: 15%;
+    font-size: xx-large;
+    font-family: cursive;
+    color: whitesmoke;
+    font-style: italic;
+}
+
+.footer-third {
+    margin-left: 15%;
+    margin-top: 4%;
+    font-size: large;
+}
+
+.footer-fourth {
+    margin-right: 10%;
+    margin-top: 4%;
+    font-size: large;
+}
+
+footer .footer-rights {
+    text-align: center;
+    color: white;
+    padding: 23px 0;
+    margin-top: 20%;
+    font-size: large;
+
+}
+
+
+footer .footer-rights:hover {
+    text-align: center;
+    color: white;
+    padding: 23px 0;
+    font-size: larger;
+    cursor: pointer;
+}
+
+.facebook:hover {
+    font-size: larger;
+    font-style: italic;
+    color: rgb(0, 64, 255);
+    font-family: cursive;
+}
+
+.instagram:hover {
+    font-size: larger;
+    font-style: italic;
+    color: #bf4a01;
+    font-family: cursive;
+}
+
+.hometwo:hover {
+    font-size: larger;
+    color: blueviolet;
+    font-weight: bolder;
+    font-family: cursive;
+}
+
+.email:hover {
+    font-size: larger;
+    font-weight: bolder;
+    font-family: cursive;
+    color: gray;
+}
+
+.tc:hover {
+    font-size: larger;
+    color: yellow;
+    font-weight: bolder;
+    font-family: cursive;
+}
+
+.Contacttwo:hover {
+    font-size: larger;
+    color: green;
+    font-weight: bolder;
+    font-family: cursive;
+}
+
+.pnglogout {
+    width: 1.5vw;
+
+} */
