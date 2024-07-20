@@ -1,0 +1,30 @@
+.tabledonorregistration {
+    background-color: #04ff26a1;
+    width: 45%;
+    margin-left: 27%;
+    /* margin-top: 60%; */
+    /* padding: 10px 50px; */
+    border: solid;
+    border-color: blue;
+    text-align: center;
+    border-radius: 46%;
+}
+
+.tableheadregistration {
+    text-align: center;
+    color: white;
+    font-size: larger;
+}
+
+.h1donorregistration {
+    text-align: center;
+    /* margin-top: 3%; */
+    font-size: xx-large;
+    font-weight: bolder;
+    color: rgb(151, 0, 0);
+}
+
+.registrationSwitchin {
+    text-align: center;
+    margin-top: 2%;
+}

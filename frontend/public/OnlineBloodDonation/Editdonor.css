@@ -1,0 +1,40 @@
+.edittable {
+    background-color: #00b1fd9d;
+    /* text-align: center; */
+    margin-left: 40%;
+    text-align: center;
+    /* padding: 10%; */
+    width: 30%;
+    margin-top: 5%;
+    border: solid;
+    border-radius: 10px;
+    border-color: rgb(255, 234, 0);
+    /* padding: 15px 20px; */
+    border-width: 4px;
+    /* width: 10%; */
+}
+
+.tableheadedit {
+    color: rgb(250, 0, 0);
+    background-color: rgba(255, 255, 255, 0.653);
+    text-align: center;
+}
+
+.editdonorshowhide {
+    text-decoration: none;
+    color: white;
+    margin-left: 1%;
+    font-size: larger;
+    cursor: pointer;
+}
+
+.editdonorshowhide:hover {
+    text-decoration: none;
+    color: white;
+    font-size: x-large;
+}
+
+.editsave {
+    /* text-align: center; */
+    /* margin-left: 40%; */
+}
