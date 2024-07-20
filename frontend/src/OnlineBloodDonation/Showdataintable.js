@@ -29,7 +29,7 @@ function Showdataintable() {
     //fetch donor
     const getData = async () => {
         // const response = await fetch(Mylink.link+'/getAlldonor');
-        const response = await fetch('http://localhost:5000/getAlldonor');
+        const response = await fetch('https://mern-full-stack-obd-tution-backend.onrender.com/getAlldonor');
         const data = await response.json();
         setAlldonors(data)
     }
@@ -37,7 +37,7 @@ function Showdataintable() {
     // fetch user
     const getDataofuser = async () => {
         // const response = await fetch(`${link}/getAlluser`);
-        const response = await fetch('http://localhost:5000/getAlluser');
+        const response = await fetch('https://mern-full-stack-obd-tution-backend.onrender.com/getAlluser');
         const data = await response.json();
         setAlluser(data)
     }
@@ -62,7 +62,7 @@ function Showdataintable() {
             };
 
             // const response = await fetch(`${link}/deletedonor/` + id, requestOptions);
-            const response = await fetch('http://localhost:5000/deletedonor/' + id, requestOptions);
+            const response = await fetch('https://mern-full-stack-obd-tution-backend.onrender.com/deletedonor/' + id, requestOptions);
 
 
             alert("Deleted Donor data Successfully")
@@ -80,7 +80,7 @@ function Showdataintable() {
             };
 
             // const response = await fetch(`${link}/deletedonor/` + id, requestOptions);
-            const response = await fetch('http://localhost:5000/deleteuser/' + id, requestOptions);
+            const response = await fetch('https://mern-full-stack-obd-tution-backend.onrender.com/deleteuser/' + id, requestOptions);
 
 
             alert("Deleted  User data Successfully")
