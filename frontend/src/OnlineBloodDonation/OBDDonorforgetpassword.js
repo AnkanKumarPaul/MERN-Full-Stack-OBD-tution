@@ -35,7 +35,7 @@ function OBDDonorforgetpassword() {
             body: JSON.stringify(new_donor)
         };
 
-        const response = await fetch('http://localhost:5000/donorcheckmail', requestOptions);
+        const response = await fetch('https://mern-full-stack-obd-tution-backend.onrender.com/donorcheckmail', requestOptions);
         const data = await response.json();
 
         if (data.length > 0) {
@@ -61,7 +61,7 @@ function OBDDonorforgetpassword() {
             body: JSON.stringify(new_donor)
         };
 
-        const response = await fetch('http://localhost:5000/updateDonorByEmail/' + email, requestOptions);
+        const response = await fetch('https://mern-full-stack-obd-tution-backend.onrender.com/updateDonorByEmail/' + email, requestOptions);
         const data = await response.json();
 
         console.log(52, data)
@@ -85,7 +85,7 @@ function OBDDonorforgetpassword() {
             body: JSON.stringify(pass)
         };
 
-        const response = await fetch('http://localhost:5000/send-email', requestOptions);
+        const response = await fetch('https://mern-full-stack-obd-tution-backend.onrender.com/send-email', requestOptions);
         const data = await response.json();
 
 
