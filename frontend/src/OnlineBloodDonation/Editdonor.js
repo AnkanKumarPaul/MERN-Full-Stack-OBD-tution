@@ -33,7 +33,7 @@ function Editdonor() {
             body: JSON.stringify(new_donor)
         };
 
-        const response = await fetch(`http://localhost:5000/updatedonor/${id}`, requestOptions);
+        const response = await fetch(`https://mern-full-stack-obd-tution-backend.onrender.com/updatedonor/${id}`, requestOptions);
         const data = await response.json();
 
         if (data._id != null) {
@@ -46,7 +46,7 @@ function Editdonor() {
     }
 
     const getDatabyId = async (id) => {
-        const response = await fetch('http://localhost:5000/getAlldonor/' + id)
+        const response = await fetch('https://mern-full-stack-obd-tution-backend.onrender.com/getAlldonor/' + id)
         const data = await response.json();
         setName(data.name)
         setPassword(data.password)
