@@ -40,7 +40,7 @@ function OBDDonorlogin() {
         if (data.message == true) {
             localStorage.setItem("loggedDonor", email)
             setMessage("Donor Login Successfully")
-            window.location.href = "/"
+            window.location.href = "/Showdataintable"
             //navigate to dashboard or home page
         }
         else {
