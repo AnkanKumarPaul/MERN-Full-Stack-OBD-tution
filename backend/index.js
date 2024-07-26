@@ -352,15 +352,32 @@ app.delete('/deleteuser/:id', async (req, res) => {
 })
 
 //Get all Method for donor
-app.get('/getAlldonor', async (req, res) => {
+// app.get('/getAlldonor', async (req, res) => {
+//     try {
+//         const data = await Donor.find();
+//         res.json(data)
+//     }
+//     catch (error) {
+//         res.status(500).json({ message: error.message })
+//     }
+// })
+
+
+
+//Get all dono by emal( 1 ta mail diye 1 jon donorlogin kore tar details dekhar jonno)
+app.get('/getDonerByEmail/:email', async (req, res) => {
     try {
-        const data = await Donor.find();
+        const email = req.params.email
+        const data = await Donor.find({ "email": email });
         res.json(data)
     }
     catch (error) {
         res.status(500).json({ message: error.message })
     }
 })
+
+//Get all dono by emal( 1 ta mail diye 1 jon donorlogin kore tar details dekhar jonno)
+
 
 //Get by ID Method for donor for edit method
 
@@ -378,9 +395,26 @@ app.get('/getAlldonor/:id', async (req, res) => {
 
 
 //Get all Method for User
-app.get('/getAlluser', async (req, res) => {
+// app.get('/getAlluser', async (req, res) => {
+//     try {
+//         const data = await User.find();
+//         res.json(data)
+//     }
+//     catch (error) {
+//         res.status(500).json({ message: error.message })
+//     }
+// })
+
+//Get by ID Method for User
+
+
+//Get all user by emal( 1 ta mail diye 1 jon userlogin kore tar details dekhar jonno)
+
+
+app.get('/getUserByEmail/:email', async (req, res) => {
     try {
-        const data = await User.find();
+        const email = req.params.email
+        const data = await User.find({ "email": email });
         res.json(data)
     }
     catch (error) {
@@ -388,7 +422,7 @@ app.get('/getAlluser', async (req, res) => {
     }
 })
 
-//Get by ID Method for User
+//Get all user by emal( 1 ta mail diye 1 jon userlogin kore tar details dekhar jonno)
 
 
 app.get('/getAlluser/:id', async (req, res) => {
