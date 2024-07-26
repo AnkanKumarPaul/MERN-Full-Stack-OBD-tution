@@ -11,7 +11,7 @@ function Showdataintable() {
     const [alluser, setAlluser] = useState([])
     // const [donors, setDonors] = useState([])
 
-    const navigate = useNavigate(); 
+    const navigate = useNavigate();
 
     // const Mylink  = require('./Mylink')
 
@@ -26,21 +26,52 @@ function Showdataintable() {
     // table a useInsertionEffect(tanlo) korlo
 
 
-    //fetch donor
+    // //fetch donor
+    // const getData = async () => {
+    //     // const response = await fetch(Mylink.link+'/getAlldonor');
+    //     const response = await fetch('http://localhost:5000/getAlldonor');
+    //     const data = await response.json();
+    //     setAlldonors(data)
+    // }
+
+
+
+
+    //Get all dono by emal( 1 ta mail diye 1 jon donorlogin kore tar details dekhar jonno)
     const getData = async () => {
-        // const response = await fetch(Mylink.link+'/getAlldonor');
-        const response = await fetch('https://mern-full-stack-obd-tution-backend.onrender.com/getAlldonor');
-        const data = await response.json();
+        const email = localStorage.getItem('loggedDonor')
+        const response = await fetch('https://mern-full-stack-obd-tution-backend.onrender.com/getDonerByEmail/' + email)
+        const data = await response.json()
+        console.log(data)
         setAlldonors(data)
     }
+    //Get all dono by emal( 1 ta mail diye 1 jon donorlogin kore tar details dekhar jonno)
+
+
 
     // fetch user
+    // const getDataofuser = async () => {
+    //     // const response = await fetch(`${link}/getAlluser`);
+    //     const response = await fetch('https://mern-full-stack-obd-tution-backend.onrender.com/getAlluser');
+    //     const data = await response.json();
+    //     setAlluser(data)
+    // }
+
+
+    //Get all user by emal( 1 ta mail diye 1 jon userlogin kore tar details dekhar jonno)
+
+
     const getDataofuser = async () => {
-        // const response = await fetch(`${link}/getAlluser`);
-        const response = await fetch('https://mern-full-stack-obd-tution-backend.onrender.com/getAlluser');
-        const data = await response.json();
+        const email = localStorage.getItem('loggedUser')
+        const response = await fetch('https://mern-full-stack-obd-tution-backend.onrender.com/getUserByEmail/' + email)
+        const data = await response.json()
+        console.log(data)
         setAlluser(data)
     }
+
+
+    //Get all user by emal( 1 ta mail diye 1 jon userlogin kore tar details dekhar jonno)
+
 
     const editdonor = (id) => {
 
@@ -62,7 +93,7 @@ function Showdataintable() {
             };
 
             // const response = await fetch(`${link}/deletedonor/` + id, requestOptions);
-            const response = await fetch('https://mern-full-stack-obd-tution-backend.onrender.com/deletedonor/' + id, requestOptions);
+            const response = await fetch('http://localhost:5000/deletedonor/' + id, requestOptions);
 
 
             alert("Deleted Donor data Successfully")
@@ -101,6 +132,14 @@ function Showdataintable() {
     //todo list?
 
 
+    // const showHide = (id) => {
+    //     if (flagtwo == 0) {
+    //         setFlagtwo(1)
+    //     }
+    //     else {
+    //         setFlagtwo(0)
+    //     }
+    // }
 
 
     return (
@@ -110,9 +149,11 @@ function Showdataintable() {
             <br></br>
             <h1 className="donornametable">DONOR TABLE</h1>
 
-            <marquee behavior="alternate" width="100%">
+            {/* <marquee behavior="alternate" width="100%">
                 <h5 className="forusertablemessage">Scroll down to see user table</h5>
-            </marquee>
+            </marquee> */}
+            {/* <br></br> */}
+
             <table className="datatable" class="table table-sm table-bordered border-primary" >
 
                 <thead >
@@ -176,7 +217,7 @@ function Showdataintable() {
 
                                     <button onClick={(e) => editdonor(data._id)} className="editbutton">Edit</button>
 
-                                    <br></br>
+                                    {/* <br></br> */}
 
                                     <button onClick={(e) => getDelete(data._id)} className="deletebutton">Delete</button>
 
@@ -191,11 +232,15 @@ function Showdataintable() {
 
             </table>
 
-
+            <br></br>
+            <br></br>
 
             {/* table for user */}
 
             <h1 className="donornametable">USER TABLE</h1>
+
+            {/* <br></br> */}
+
             <table className="datatable" class="table table-sm table-bordered border-primary" >
 
                 <thead >
@@ -256,7 +301,7 @@ function Showdataintable() {
 
                                     <button onClick={(e) => edituser(data._id)} className="editbutton">Edit</button>
 
-                                    <br></br>
+                                    {/* <br></br> */}
 
                                     <button onClick={(e) => getDeletetwo(data._id)} className="deletebutton">Delete</button>
 
