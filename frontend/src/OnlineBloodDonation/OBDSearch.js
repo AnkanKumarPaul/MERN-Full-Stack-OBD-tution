@@ -15,14 +15,14 @@ function OBDSearch() {
 
     const getData = async () => {
         // const email = localStorage.getItem('loggedDonor')
-        const response = await fetch('http://localhost:5000/getAlldonor');
+        const response = await fetch('https://mern-full-stack-obd-tution-backend.onrender.com/getAlldonor');
         // const response = await fetch('http://localhost:5000/getDonerByEmail/' + email)
         const data = await response.json();
         setAlldonors(data)
     }
 
     const getDataofuser = async () => {
-        const response = await fetch('http://localhost:5000/getAlluser');
+        const response = await fetch('https://mern-full-stack-obd-tution-backend.onrender.com/getAlluser');
         const data = await response.json();
         setAlluser(data)
     }
@@ -51,7 +51,7 @@ function OBDSearch() {
                 body: JSON.stringify(byaddressandblood)
             };
 
-            const response = await fetch('http://localhost:5000/searchbyboth', requestOptions)
+            const response = await fetch('https://mern-full-stack-obd-tution-backend.onrender.com/searchbyboth', requestOptions)
             const data1 = await response.json();
             setAlldonors(data1)
         }
@@ -69,7 +69,7 @@ function OBDSearch() {
 
         else {
 
-            const response = await fetch(`http://localhost:5000/searchbybloodgroup/${value}`)
+            const response = await fetch(`https://mern-full-stack-obd-tution-backend.onrender.com/searchbybloodgroup/${value}`)
             const data1 = await response.json();
             setAlldonors(data1)
             console.log(data1);
@@ -88,7 +88,7 @@ function OBDSearch() {
 
         else {
 
-            const responsetwo = await fetch(`http://localhost:5000/searchbybloodgrouptwo/${value}`)
+            const responsetwo = await fetch(`https://mern-full-stack-obd-tution-backend.onrender.com/searchbybloodgrouptwo/${value}`)
 
             const data1 = await responsetwo.json();
             setAlluser(data1)
@@ -107,7 +107,7 @@ function OBDSearch() {
 
         else {
 
-            const response = await fetch(`http://localhost:5000/searchbyname/${value}`)
+            const response = await fetch(`https://mern-full-stack-obd-tution-backend.onrender.com/searchbyname/${value}`)
             const datathree = await response.json();
             setName(datathree)
             console.log(datathree);
