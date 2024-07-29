@@ -70,7 +70,7 @@ function OBDDonorregistraion() {
                     request you to please wait... :) </h5>
             </marquee>
 
-              <h1 className="h1donorregistration">Online Blood Donation</h1>
+              <h1 className="h1donorregistration"> Blood Donation </h1>
         
             <table className="tabledonorregistration">
 
