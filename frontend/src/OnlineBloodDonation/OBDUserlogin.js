@@ -43,13 +43,17 @@ function OBDUserlogin() {
         const data = await response.json();
 
         if (data.message === true) {
-            localStorage.setItem("loggedUser",email)
-            setMessage("User Login Successfully")
+            localStorage.setItem("loggedUser", email)
+            setMessage("User Login Successfull")
+            alert("User login successfull, please wait...")
             window.location.href = "/"
             //navigate to dashboard or home page
         }
         else {
             setMessage("User Login Failed")
+            window.location.href = "/"
+            alert("User Login failed, check mail or password and try again")
+
         }
     }
 
@@ -76,7 +80,7 @@ function OBDUserlogin() {
                 <br></br>
 
                 <tr>
-                    <td >Enter Email Id <input className="my-input" type="email" name="" placeholder="Enter Email Id" onChange={(e) => setEmail(e.target.value)} /></td>
+                    <td >Enter Email Id : <input className="my-input" type="email" name="" placeholder="Enter Email Id" onChange={(e) => setEmail(e.target.value)} /></td>
                 </tr>
                 <br></br>
                 <tr><td>Enter Password :
@@ -91,7 +95,7 @@ function OBDUserlogin() {
                             <input className="my-input" type="text" name="" placeholder="Enter Password" onChange={(e) => setPassword(e.target.value)} />
                     }
 
-                    <a onClick={showHide}  className="userloginshowhide">
+                    <a onClick={showHide} className="userloginshowhide">
 
                         {flag === 0 ? <FaEyeSlash /> : <FaEye />}
 
