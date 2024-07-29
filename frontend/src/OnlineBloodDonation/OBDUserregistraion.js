@@ -66,12 +66,12 @@ function OBDUserregistraion() {
     return (
         <>
 
-            <h1 className="h1userregistration">Online Blood Donation</h1>
-
              <marquee width="100%">
                 <h5 className="forusertablemessagetwo">Login and Registration will take some time for first time,
                     request you to please wait... :) </h5>
             </marquee>
+
+              <h1 className="h1userregistration"> Blood Donation </h1>
         
             <table className="tableuserregistration">
 
