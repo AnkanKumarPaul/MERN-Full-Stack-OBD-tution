@@ -109,13 +109,13 @@ function Mainpage() {
 
                                     <li>
 
-                                        <Link to="/OBDUserlogin" className="User"> <FontAwesomeIcon icon={faUser} /> Login as User </Link>
+                                        <Link to="/OBDUserlogin" className="User"> <FontAwesomeIcon icon={faUser} />  User </Link>
 
                                     </li>
 
                                     <li>
 
-                                        <Link to="/OBDDonorlogin" className="Donor"> <FontAwesomeIcon icon={faHospitalUser} /> Login as  Donor </Link>
+                                        <Link to="/OBDDonorlogin" className="Donor"> <FontAwesomeIcon icon={faHospitalUser} />  Donor </Link>
 
                                     </li>
 
