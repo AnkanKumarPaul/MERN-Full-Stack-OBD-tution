@@ -39,12 +39,16 @@ function OBDDonorregistraion() {
         const response = await fetch('https://mern-full-stack-obd-tution-backend.onrender.com/registerdonor', requestOptions);
         const data = await response.json();
 
-        if (data._id != null) {
+       if (data._id != null) {
             setMessage("Donor Registration Successfull")
+            alert("Donor Registration Successfull")
             window.location.href = "/"
         }
         else {
             setMessage("Registraion Failed")
+            alert("Registraion Failed")
+             window.location.href = "/"
+
         }
     }
 
