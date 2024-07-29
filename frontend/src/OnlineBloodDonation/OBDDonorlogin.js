@@ -64,7 +64,7 @@ function OBDDonorlogin() {
     return (
         <>
 
-            <h1 className="h1donorlogin">Online Blood Donation</h1>
+            <h1 className="h1donorlogin"> Blood Donation </h1>
 
              <marquee width="100%">
                 <h5 className="forusertablemessagetwo">Login and Registration will take some time for first time,
