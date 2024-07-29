@@ -10,10 +10,11 @@
     border-radius: 10%;
 }
 
+
 .tableheadsearch {
     text-align: center;
     color: white;
-    font-size: larger; 
+    font-size: larger;
 }
 
 .h1search {
@@ -56,9 +57,11 @@
 
 .forusertablemessagetwo {
     color: blue;
-    background: #ffff0c69;
+    background: #ffff0c81;
     width: 40%;
     font-size: x-large;
     font-weight: 500;
     font-family: 'Courier New', Courier, monospace;
+    /* border: solid;
+    border-color: rgb(255, 0, 0); */
 }
