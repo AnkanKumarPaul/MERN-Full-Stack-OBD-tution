@@ -352,15 +352,15 @@ app.delete('/deleteuser/:id', async (req, res) => {
 })
 
 //Get all Method for donor
-// app.get('/getAlldonor', async (req, res) => {
-//     try {
-//         const data = await Donor.find();
-//         res.json(data)
-//     }
-//     catch (error) {
-//         res.status(500).json({ message: error.message })
-//     }
-// })
+app.get('/getAlldonor', async (req, res) => {
+    try {
+        const data = await Donor.find();
+        res.json(data)
+    }
+    catch (error) {
+        res.status(500).json({ message: error.message })
+    }
+})
 
 
 
@@ -395,15 +395,15 @@ app.get('/getAlldonor/:id', async (req, res) => {
 
 
 //Get all Method for User
-// app.get('/getAlluser', async (req, res) => {
-//     try {
-//         const data = await User.find();
-//         res.json(data)
-//     }
-//     catch (error) {
-//         res.status(500).json({ message: error.message })
-//     }
-// })
+app.get('/getAlluser', async (req, res) => {
+    try {
+        const data = await User.find();
+        res.json(data)
+    }
+    catch (error) {
+        res.status(500).json({ message: error.message })
+    }
+})
 
 //Get by ID Method for User
 
@@ -425,6 +425,30 @@ app.get('/getUserByEmail/:email', async (req, res) => {
 //Get all user by emal( 1 ta mail diye 1 jon userlogin kore tar details dekhar jonno)
 
 
+
+
+
+//admin , j sobai k table a dekhte pabe
+
+// app.get('/getAdmin', async (req, res) => {
+//         try {
+//             const data = await User.find();
+//             const datatwo = await Donor.find();
+//             res.json(data)
+//             res.json(datatwo)
+//         }
+//         catch (error) {
+//             res.status(500).json({ message: error.message })
+//         }
+//     })
+
+//admin , j sobai k table a dekhte pabe
+
+
+
+
+
+
 app.get('/getAlluser/:id', async (req, res) => {
 
     try {
@@ -437,12 +461,14 @@ app.get('/getAlluser/:id', async (req, res) => {
 })
 
 
-//search by blood group er get method
+//search by blood group er get method // for donor search by blood group
 
 app.get('/searchbybloodgroup/:bloodgroup', async (req, res) => {
     try {
         const data = await Donor.find({ "bloodgroup": req.params.bloodgroup });
+        // const datatwo = await User.find({ "bloodgroup": req.params.bloodgroup });
         res.json(data)
+        // res.json(datatwo)
     }
     catch (error) {
         res.status(500).json({ message: error.message })
@@ -450,7 +476,21 @@ app.get('/searchbybloodgroup/:bloodgroup', async (req, res) => {
 
 })
 
+// for donor search by blood group
 
+// for user search by blood group
+
+app.get('/searchbybloodgrouptwo/:bloodgroup', async (req, res) => {
+    try {
+        const data = await User.find({ "bloodgroup": req.params.bloodgroup });
+        res.json(data)
+    }
+    catch (error) {
+        res.status(500).json({ message: error.message })
+    }
+
+})
+// for user search by blood group
 
 //search by name
 
