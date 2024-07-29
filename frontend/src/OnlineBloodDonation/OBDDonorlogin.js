@@ -13,7 +13,7 @@ import { FaEye, FaEyeSlash } from 'react-icons/fa';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faEyeSlash } from '@fortawesome/free-solid-svg-icons'
 
-function OBDDonorlogin() { 
+function OBDDonorlogin() {
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -39,12 +39,16 @@ function OBDDonorlogin() {
 
         if (data.message == true) {
             localStorage.setItem("loggedDonor", email)
-            setMessage("Donor Login Successfully")
+            setMessage("Donor Login Successfull")
+            alert("Donor login successfull, please wait...")
             window.location.href = "/"
             //navigate to dashboard or home page
         }
         else {
             setMessage("Donor Login Failed")
+
+            alert("Donor Login failed, check mail or password and try again")
+            window.location.href = "/"
         }
     }
 
@@ -73,7 +77,7 @@ function OBDDonorlogin() {
                 <br></br>
 
                 <tr>
-                    <td>Enter Email Id <input className="my-input" type="email" name="" placeholder="Enter Email Id" onChange={(e) => setEmail(e.target.value)} /></td>
+                    <td>Enter Email Id : <input className="my-input" type="email" name="" placeholder="Enter Email Id" onChange={(e) => setEmail(e.target.value)} /></td>
                 </tr>
                 <br></br>
                 <tr><td>Enter Password :
