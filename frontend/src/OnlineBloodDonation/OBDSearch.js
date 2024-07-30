@@ -118,12 +118,13 @@ function OBDSearch() {
 
     useEffect(() => {
         getData()
+         getDataofuser()
     }, [])
 
 
-    useEffect(() => {
-        getDataofuser()
-    }, [])
+    // useEffect(() => {
+       
+    // }, [])
 
     return (
         <>
