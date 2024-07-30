@@ -14,4 +14,4 @@ This **"Blood Donation Website"** is a full-stack application built using the **
 
 **>>>>>** To store the data of registered donors I used **MongoDB Cluster** to ensures scalability and reliability of the database to handle user registrations and search queries.
 
-**>>>>>** I implemented a **Razorpay payment gateway** to make secure financial contributions to support the platform or related causes through the integrated payment gateway.
+**>>>>>>** I implemented a **Razorpay payment gateway** to make secure financial contributions to support the platform or related causes through the integrated payment gateway.
