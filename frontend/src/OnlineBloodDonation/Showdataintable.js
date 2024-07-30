@@ -124,11 +124,12 @@ function Showdataintable() {
 
     useEffect(() => {
         getData()
-    }, [])
-
-    useEffect(() => {
         getDataofuser()
     }, [])
+
+    // useEffect(() => {
+        
+    // }, [])
     //todo list?
 
 
