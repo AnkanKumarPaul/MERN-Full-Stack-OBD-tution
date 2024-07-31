@@ -132,27 +132,59 @@ app.post('/registeruser', async (req, res) => {
 
 //Login Post Method
 
-app.post('/logindonor', async (req, res) => {
+// app.post('/logindonor', async (req, res) => {
 
+//     const password = req.body.password
+
+//     const res1 = await Donor.find({ email: req.body.email })
+
+//     const hpass = res1[0].password
+
+//     const result = await comparePassword(password, hpass)
+
+//     // console.log(139, result)
+
+//     if (result) {
+//         res.send({ 'message': true })
+//     }
+//     else {
+//         res.send({ 'message': false })
+//     }
+
+
+// })
+
+
+
+app.post('/logindonor', async (req, res) => {
     const password = req.body.password
 
     const res1 = await Donor.find({ email: req.body.email })
+    if (res1.length > 0) {
+        const hpass = res1[0].password
 
-    const hpass = res1[0].password
+        const result = await comparePassword(password, hpass)
 
-    const result = await comparePassword(password, hpass)
+        console.log(145, result)
 
-    // console.log(139, result)
+        if (result) {
+            res.send({ 'message': true })
+        }
+        else {
+            res.send({ 'message': false })
+        }
 
-    if (result) {
-        res.send({ 'message': true })
     }
     else {
         res.send({ 'message': false })
+
     }
 
-
 })
+
+
+
+
 
 //forget password for user start
 app.post('/checkmail', async (req, res) => {
@@ -257,28 +289,70 @@ app.patch('/updateDonorByEmail/:email', async (req, res) => {
 //donar k forget password ta kon mail a new password update hobe seta jananor jonno
 //forget password for donor end
 
-app.post('/loginuser', async (req, res) => {
+// app.post('/loginuser', async (req, res) => {
 
+//     const password = req.body.password
+
+//     const res1 = await User.find({ email: req.body.email })
+
+//     const hpass = res1[0].password
+
+//     const result = await comparePassword(password, hpass)
+
+//     // console.log(139, result)
+
+//     if (result) {
+//         res.send({ 'message': true })
+//     }
+//     else {
+//         res.send({ 'message': false })
+//     }
+
+// })
+
+
+
+
+
+
+app.post('/loginUser', async (req, res) => {
     const password = req.body.password
 
     const res1 = await User.find({ email: req.body.email })
+    if (res1.length > 0) {
+        const hpass = res1[0].password
 
-    const hpass = res1[0].password
+        const result = await comparePassword(password, hpass)
 
-    const result = await comparePassword(password, hpass)
+        console.log(145, result)
 
-    // console.log(139, result)
+        if (result) {
+            res.send({ 'message': true })
+        }
+        else {
+            res.send({ 'message': false })
+        }
 
-    if (result) {
-        res.send({ 'message': true })
     }
     else {
         res.send({ 'message': false })
+
     }
 
-
-
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //Update by ID Method for edit page
 app.patch('/updatedonor/:id', async (req, res) => {
