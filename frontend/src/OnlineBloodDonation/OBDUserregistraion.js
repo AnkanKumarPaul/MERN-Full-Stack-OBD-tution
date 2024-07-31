@@ -11,7 +11,7 @@ function OBDUserregistraion() {
     const [name, setName] = useState('')
     const [address, setAddress] = useState('')
     const [phoneno, setPhoneno] = useState('')
-    const [bloodgroup, setBloodgroup] = useState('')
+    const [bloodgroup, setBloodgroup] = useState('') 
     const [message, setMessage] = useState('')
 
     // odik a API Creation file(server file_backend) a jeigulo name dewa ache setar name gulo ekhane tanche
