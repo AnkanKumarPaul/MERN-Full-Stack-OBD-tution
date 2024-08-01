@@ -29,7 +29,7 @@ function OBDSearch() {
     //ei part ta korchilam
 
 
-    const searchbyboth = async (value) => {
+    const searchbybothdonor = async (value) => {
         setAddress(value)
         // setName(value)
 
@@ -39,7 +39,7 @@ function OBDSearch() {
 
         else {
 
-            const byaddressandblood = {
+            const byaddressandblooddonor = {
                 "address": value,
                 "bloodgroup": bloodgroup,
                 // "name":value
@@ -48,12 +48,41 @@ function OBDSearch() {
             const requestOptions = {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(byaddressandblood)
+                body: JSON.stringify(byaddressandblooddonor)
             };
 
-            const response = await fetch('https://mern-full-stack-obd-tution-backend.onrender.com/searchbyboth', requestOptions)
+            const response = await fetch('https://mern-full-stack-obd-tution-backend.onrender.com/searchbybothdonor', requestOptions)
             const data1 = await response.json();
             setAlldonors(data1)
+        }
+    }
+
+
+    const searchbybothuser = async (value) => {
+        setAddress(value)
+        // setName(value)
+
+        if (value == null || value === "") {
+            getData()
+        }
+
+        else {
+
+            const byaddressandblooduser = {
+                "address": value,
+                "bloodgroup": bloodgroup,
+                // "name":value
+            }
+
+            const requestOptions = {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(byaddressandblooduser)
+            };
+
+            const response = await fetch('https://mern-full-stack-obd-tution-backend.onrender.com/searchbybothuser', requestOptions)
+            const data1 = await response.json();
+            setAlluser(data1)
         }
     }
 
@@ -99,31 +128,31 @@ function OBDSearch() {
     // for blood group search user
 
 
-    const searchbyname = async (value) => {
-        setName(value)
-        if (value == null || value === "") {
-            getData()
-        }
+    // const searchbyname = async (value) => {
+    //     setName(value)
+    //     if (value == null || value === "") {
+    //         getData()
+    //     }
 
-        else {
+    //     else {
 
-            const response = await fetch(`https://mern-full-stack-obd-tution-backend.onrender.com/searchbyname/${value}`)
-            const datathree = await response.json();
-            setName(datathree)
-            console.log(datathree);
-        }
-        // 
-    }
+    //         const response = await fetch(`https://mern-full-stack-obd-tution-backend.onrender.com/searchbyname/${value}`)
+    //         const datathree = await response.json();
+    //         setName(datathree)
+    //         console.log(datathree);
+    //     }
+    //     // 
+    // }
 
 
     useEffect(() => {
         getData()
-         getDataofuser()
+        getDataofuser()
     }, [])
 
 
     // useEffect(() => {
-       
+
     // }, [])
 
     return (
@@ -153,18 +182,25 @@ function OBDSearch() {
                     </td>
                 </tr>
                 <br></br>
-                <tr>
+                {/* <tr>
                     <td>Enter Your Location:  <input onChange={(e) => searchbyboth(e.target.value)} type="search" placeholder="Enter Location" />
+
+                    </td>
+                </tr> */}
+                <tr>
+                    <td>Enter Your Location:  <input onKeyUp={(e) => searchbybothdonor(e.target.value)} type="search" placeholder="Enter Location" />
 
                     </td>
                 </tr>
                 <br></br>
-                <tr>
+
+                {/* <tr>
                     <td>Enter Your Name:  <input onChange={(e) => searchbyname(e.target.value)} type="search" placeholder="Enter Name" />
 
                     </td>
                 </tr>
-                <br></br>
+                <br></br> */}
+
             </table>
 
             <br></br>
@@ -255,18 +291,27 @@ function OBDSearch() {
                     </td>
                 </tr>
                 <br></br>
-                <tr>
+                {/* <tr>
                     <td>Enter Your Location:  <input onChange={(e) => searchbyboth(e.target.value)} type="search" placeholder="Enter Location" />
 
                     </td>
-                </tr>
-                <br></br>
+                </tr> */}
+
                 <tr>
+                    <td>Enter Your Location:  <input onKeyUp={(e) => searchbybothuser(e.target.value)} type="search" placeholder="Enter Location" />
+
+                    </td>
+                </tr>
+
+                <br></br>
+
+                {/* <tr>
                     <td>Enter Your Name:  <input onChange={(e) => searchbyname(e.target.value)} type="search" placeholder="Enter Name" />
 
                     </td>
                 </tr>
-                <br></br>
+                <br></br> */}
+
             </table>
 
 
