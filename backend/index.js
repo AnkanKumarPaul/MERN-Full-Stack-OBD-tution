@@ -584,7 +584,7 @@ app.post('/searchbyname', async (req, res) => {
 //aksathe
 
 // , name: { $regex: req.body.name }
-app.post('/searchbyboth', async (req, res) => {
+app.post('/searchbybothdonor', async (req, res) => {
     try {
         const datatwo = await Donor.find({ address: { $regex: req.body.address }, "bloodgroup": req.body.bloodgroup });
         res.json(datatwo)
@@ -594,6 +594,20 @@ app.post('/searchbyboth', async (req, res) => {
     }
 
 })
+
+
+
+app.post('/searchbybothuser', async (req, res) => {
+    try {
+        const datatwo = await User.find({ address: { $regex: req.body.address }, "bloodgroup": req.body.bloodgroup });
+        res.json(datatwo)
+    }
+    catch (error) {
+        res.status(500).json({ message: error.message })
+    }
+
+})
+
 
 //aksathe
 
