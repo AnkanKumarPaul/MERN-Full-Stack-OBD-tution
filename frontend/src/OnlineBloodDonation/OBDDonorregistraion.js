@@ -1,0 +1,269 @@
+import { useState } from "react"
+
+import "./OBDDonorregistraion.css"
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
+
+function OBDDonorregistraion() {
+
+    const [flag, setFlag] = useState(0)
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const [name, setName] = useState('')
+    const [address, setAddress] = useState('')
+    const [phoneno, setPhoneno] = useState('')
+    const [bloodgroup, setBloodgroup] = useState('')
+    const [message, setMessage] = useState('')
+
+    // odik a API Creation file(server file_backend) a jeigulo name dewa ache setar name gulo ekhane tanche
+
+    // const registerDonor = async () => {
+    //     const new_donor = {
+    //         "name": name,
+    //         "email": email,
+    //         "password": password,
+    //         "address": address,
+    //         "contact": phoneno,
+    //         "bloodgroup": bloodgroup
+    //     }
+
+
+
+    //     // odik a API Creation file(server file_backend) a jeigulo name dewa ache setar name gulo ekhane tanche
+
+    //     const requestOptions = {
+    //         method: 'POST',
+    //         headers: { 'Content-Type': 'application/json' },
+    //         body: JSON.stringify(new_donor)
+    //     };
+
+    //     const response = await fetch('http://localhost:5000/registerdonor', requestOptions);
+    //     const data = await response.json();
+
+    //     if (data._id != null) {
+    //         setMessage("Donor Registration Successful")
+    //         alert("Donor Registration Successful")
+    //         window.location.href = "/"
+    //     }
+    //     else {
+    //         setMessage("Donor Registraion Failed")
+    //         alert("Donor Registraion Failed")
+    //         window.location.href = "/"
+
+    //     }
+    // }
+
+    const checkdonorEmailExistence = async (email) => {
+        const response = await fetch(`http://localhost:5000/checkdonorEmail/${email}`);
+        const data = await response.json();
+
+        if (data.exists) {
+            setMessage("This email is already registered");
+            alert("This email is already registered");
+            return true; // Email already exists
+        } else {
+            return false; // Email does not exist, proceed with registration
+        }
+    }
+
+    const registerDonor = async () => {
+        // Check if email is already registered
+        const emailExists = await checkdonorEmailExistence(email);
+
+        if (emailExists) {
+            return; // Stop further execution if email is already registered
+        }
+
+        const new_donor = {
+            "name": name,
+            "email": email,
+            "password": password,
+            "address": address,
+            "contact": phoneno,
+            "bloodgroup": bloodgroup
+        }
+
+        const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(new_donor)
+        };
+
+        const response = await fetch('http://localhost:5000/registerdonor', requestOptions);
+        const data = await response.json();
+
+        if (data._id != null) {
+            setMessage("Donor Registration Successful");
+            alert("Donor Registration Successful");
+            window.location.href = "/";
+        } else {
+            setMessage("Donor Registration Failed");
+            alert("Donor Registration Failed");
+            window.location.href = "/";
+        }
+    }
+
+
+
+
+
+    const showHide = (id) => {
+        if (flag == 0) {
+            setFlag(1)
+        }
+        else {
+            setFlag(0)
+        }
+    }
+
+    return (
+        <>
+
+            <marquee behavior="alternate" width="100%">
+                <h5 className="forusertablemessagetwo">Login and Registration will take some time for first time,
+                    request you to please wait... :) </h5>
+            </marquee>
+
+            <h1 className="h1donorregistration"> Blood Donation </h1>
+
+            {/* <table className="tabledonorregistration">
+
+                <tr>
+                    <th className="tableheadregistration">Donor Registration</th>
+                </tr>
+                <br></br>
+                <tr>
+                    <td>Enter Your Name : <input type="text" name="" placeholder="Enter Name" onChange={(e) => setName(e.target.value)} /></td>
+                </tr>
+                <br></br>
+                <tr>
+                    <td>Enter Email Id : <input type="email" name="" placeholder="Enter Email Id" onChange={(e) => setEmail(e.target.value)} /></td>
+                </tr>
+                <br></br>
+
+                <tr><td>Enter Password :
+                    {
+                        flag == 0 ?
+                            <input className="my-input" type="password" name="" placeholder="Enter Password" onChange={(e) => setPassword(e.target.value)} />
+
+                            :
+
+                            <input className="my-input" type="text" name="" placeholder="Enter Password" onChange={(e) => setPassword(e.target.value)} />
+                    }
+
+                    <a onClick={showHide} className="donorloginshowhide">
+
+                        {flag == 0 ? <FaEyeSlash /> : <FaEye />}
+
+                    </a>
+
+
+                </td></tr>
+           
+                <br></br>
+                <tr>
+                    <td>Enter Your Address : <input type="text" name="" placeholder="Enter Address" onChange={(e) => setAddress(e.target.value)} /></td>
+                </tr>
+                <br></br>
+                <tr>
+                    <td>Enter Your Phone No : <input type="number" name="" placeholder="Enter Phone No" onChange={(e) => setPhoneno(e.target.value)} /></td>
+                </tr>
+                <br></br>
+                <tr>
+
+                    <td>Select Blood Group : <select name="" id="" title="Blood Group" onChange={(e) => setBloodgroup(e.target.value)}>
+
+                        <option >Select</option>
+                        <option >A+</option>
+                        <option >A-</option>
+                        <option >B+</option>
+                        <option >B-</option>
+                        <option >o+</option>
+                        <option >o-</option>
+
+                    </select>
+                    </td>
+
+                </tr>
+                <br></br>
+
+                {message}
+
+                <tr >
+                    <td className="registrationSwitch"><input className="registrationSwitchin" type="Submit" value="Save" onClick={registerDonor} /></td>
+                </tr>
+                <br></br>
+
+                <br></br>
+
+            </table> */}
+
+
+
+
+
+            <table className="tabledonorregistration">
+                <br></br>
+                <tr>
+                    <th className="tableheadregistration"><b>Donor Registration</b></th>
+                </tr>
+                <hr></hr>
+                <br></br>
+                <tr>
+                    <td><b>Enter Your Name :</b> <input className="inputbox2" type="text" name="" placeholder="Enter Name" onChange={(e) => setName(e.target.value)} /></td>
+                </tr>
+                <br></br>
+                <tr>
+                    <td><b>Enter Email Id :</b> <input className="inputbox2" type="email" name="" placeholder="Enter Email Id" onChange={(e) => setEmail(e.target.value)} /></td>
+                </tr>
+                <br></br>
+
+                <tr><td><b>Enter Password :</b>
+                    {
+                        flag == 0 ?
+                            <input className="inputbox2" type="password" name="" placeholder="Enter Password" onChange={(e) => setPassword(e.target.value)} />
+                            :
+                            <input className="inputbox2" type="text" name="" placeholder="Enter Password" onChange={(e) => setPassword(e.target.value)} />
+                    }
+                    <a onClick={showHide} className="donorloginshowhide">
+                        {flag == 0 ? <FaEyeSlash /> : <FaEye />}
+                    </a>
+                </td></tr>
+                <br></br>
+                <tr>
+                    <td><b>Enter Your Address :</b> <input className="inputbox2" type="text" name="" placeholder="Enter Address" onChange={(e) => setAddress(e.target.value)} /></td>
+                </tr>
+                <br></br>
+                <tr>
+                    <td><b>Enter Your Phone No :</b> <input className="inputbox2" type="number" name="" placeholder="Enter Phone No" onChange={(e) => setPhoneno(e.target.value)} /></td>
+                </tr>
+                <br></br>
+                <tr>
+                    <td><b>Select Blood Group :</b> <select className="bloodgroupsearch2" name="" id="" title="Blood Group" onChange={(e) => setBloodgroup(e.target.value)}>
+                        <option>Select</option>
+                        <option>A+</option>
+                        <option>A-</option>
+                        <option>B+</option>
+                        <option>B-</option>
+                        <option>O+</option>
+                        <option>O-</option>
+                    </select>
+                    </td>
+                </tr>
+                <br></br>
+
+                {message}
+
+                <tr>
+                    <td className="registrationSwitch"><input className="submit" type="Submit" value="Register" onClick={registerDonor} /></td>
+                </tr>
+                <br></br>
+
+                <br></br>
+
+            </table>
+
+        </>
+    )
+}
+
+export default OBDDonorregistraion

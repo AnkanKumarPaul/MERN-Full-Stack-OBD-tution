@@ -1,0 +1,53 @@
+.buttons-containeraccrej {
+    display: flex;
+    gap: 10px;
+}
+
+.buttonaccrej {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    border: solid;
+    border-color: aqua;
+    border-radius: 1rem;
+}
+
+.buttonaccrej:hover {
+    opacity: 0.7;
+    font-style: italic;
+}
+
+.accept-btn {
+    background-color: rgb(0, 177, 0);
+    color: white;
+    transition: transform 0.50s ease, opacity 0.50s ease, box-shadow 0.40s ease;
+}
+
+.accept-btn:hover {
+    border-color: green;
+    color: green;
+    background-color: white;
+    box-shadow: 0 0 10px 8px rgb(37, 255, 37);
+}
+
+.reject-btn {
+    margin-left: 20%;
+    background-color: rgb(231, 0, 0);
+    color: white;
+    transition: transform 0.50s ease, opacity 0.50s ease, box-shadow 0.40s ease;
+}
+
+.reject-btn:hover {
+    border-color: red;
+    color: rgb(231, 0, 0);
+    background-color: white;
+    box-shadow: 0 0 10px 8px rgb(255, 104, 104);
+}
+
+.blood {
+    color: red;
+    font-weight: bolder;
+    font-size: large;
+}

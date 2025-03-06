@@ -1,0 +1,413 @@
+.tablesearch1 {
+    background-color: rgba(176, 5, 255, 0.461);
+    width: 25vw;
+    padding: 10px;
+    /* border: solid; */
+    border-radius: 10%;
+    border-color: rgb(255, 255, 255);
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(5%);
+    box-shadow: 5px 2px 60px 10px #f5f8a8;
+    transition: box-shadow 0.3s ease;
+}
+
+.tablesearch1:hover {
+    box-shadow: 0 15px 20px #f5f8a8;
+}
+
+.bloodgroupsearch2 {
+    background-color: #fff;
+    padding: 8px 8px;
+    border-radius: 18px;
+    border: 1px solid #ddd;
+    font-family: cursive;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 4px 8px rgba(0, 47, 255, 0.774), 0 10px 15px rgba(100, 232, 223, 0.858);
+    align-items: center;
+    color: rgb(240, 4, 4);
+    background-color: #fddfdf;
+    cursor: pointer;
+}
+
+.bloodgroupsearch2:hover {
+    border-color: white;
+    box-shadow: inset 0 8px 16px rgba(232, 102, 102, 0.658), 0 15px 20px rgba(255, 219, 216, 0.877);
+}
+
+input {
+    outline: none;
+}
+
+select {
+    outline: none;
+}
+
+.inputbox2 {
+    box-shadow: 5px 2px 60px 25px #ffffffd2;
+    transition: box-shadow 0.3s ease;
+    padding: 2px 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    caret-color: black;
+    outline: none;
+    width: 100%;
+    max-width: 200px;
+    font-family: 'Arial', sans-serif;
+    border-color: #33ff70;
+}
+
+
+.inputbox2:hover {
+    border: 2px solid #ccc;
+    background: linear-gradient(145deg, #f3f3f3, #ffffff);
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+    caret-color: black;
+    outline: none;
+    width: 100%;
+    box-shadow: 0 15px 20px rgba(255, 254, 254, 0.877);
+    border-color: #33b5ff;
+}
+
+.inputbox2:focus {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.546);
+    transform: scale(1.45);
+    outline: none;
+    padding: 2px 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background: linear-gradient(145deg, #f3f3f3, #e2e2e2);
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+    caret-color: black;
+    width: 100%;
+    max-width: 200px;
+    font-family: 'Arial', sans-serif;
+    border-color: #33b5ff;
+}
+
+.inputbox2::placeholder {
+    color: #7a7a7aa0;
+    /* background-color: #dfdfdf82; */
+    width: 170px;
+    font-style: italic;
+    font-family: cursive;
+}
+
+.tableheadsearch {
+    text-align: center;
+    color: white;
+    font-size: larger;
+}
+
+.h1search {
+    text-align: center;
+    margin-top: 3%;
+    font-size: xx-large;
+    font-weight: bolder;
+    color: white;
+    font-family: cursive;
+    /* color: rgb(151, 0, 0); */
+}
+
+.registrationSwitchin {
+    text-align: center;
+    margin-top: 2%;
+}
+
+.table-bordered2 {
+    background-color: white !important;
+}
+
+.table-bordered3 {
+    background-color: rgba(255, 255, 255, 0.637) !important;
+}
+
+.searchdatatablehead {
+    border: solid;
+    border-color: rgb(153, 255, 0);
+    border-radius: 5rem;
+    text-align: center;
+    color: white;
+    font-size: larger;
+    background-color: rgba(0, 13, 255, 0.468);
+    box-shadow: 5px 2px 60px 30px #b5f8a8;
+}
+
+.bllodiconsearch {
+    color: rgb(255, 74, 74);
+}
+
+.btnone {
+    margin-bottom: 2%;
+}
+
+.donorslistname2 {
+    text-align: center;
+    color: rgb(255, 242, 242);
+    background: #70707043;
+    width: 60%;
+    margin-left: 20%;
+    /* padding: 10px ; */
+    border: solid;
+    border-color: rgb(0, 0, 255);
+    text-align: center;
+    border-radius: 30%;
+    /* box-shadow: 10px 15px 10px 30px rgba(255, 201, 201, 0.877); */
+
+}
+
+.forusertablemessagetwo {
+    color: blue;
+    background: #ffff0c81;
+    width: 105%;
+    font-size: x-large;
+    font-weight: 500;
+    font-family: 'Courier New', Courier, monospace;
+    /* border: solid;
+    border-color: rgb(255, 0, 0); */
+}
+
+
+.welcome-message {
+    position: fixed;
+    top: 15%;
+    left: 87%;
+    color: #04ad1d;
+    animation: colorFade 4s infinite alternate;
+    background-color: white;
+    font-family: cursive;
+    font-weight: bolder;
+    font-style: italic;
+    padding: 15px 25px;
+    font-size: 16px;
+    border-radius: 10px;
+    box-shadow: 5px 14px 10px rgba(0, 0, 0, 0.623);
+}
+
+@keyframes colorFade {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    50% {
+        filter: hue-rotate(180deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.btn-danger {
+    border: solid;
+    padding: 10px;
+    border-radius: 15px;
+    border-color: aqua;
+    transition: transform 0.50s ease, opacity 0.50s ease, box-shadow 0.40s ease;
+}
+
+.btn-danger:hover {
+    box-shadow: 5px 2px 20px 15px rgba(255, 106, 106, 0.553);
+    background-color: white;
+    color: red;
+}
+
+.popuphead {
+    color: brown;
+    background-color: #ffffffbf;
+    border-radius: 2rem;
+    font-style: italic;
+    font-size: larger;
+    text-align: center;
+    font-family: cursive;
+    font-weight: bolder;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 2s steps(30) 0.1s forwards, blinkCaret 0.05s step-end infinite;
+}
+
+@keyframes typing {
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blinkCaret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-image: url(Contactpopup.gif);
+    background-size: contain;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    position: relative;
+    animation: dropDown 1.5s ease-out;
+}
+
+
+@keyframes dropDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.close {
+    color: black;
+    position: absolute;
+    top: -2px;
+    right: 2px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: brown;
+}
+
+.buttonfeedback {
+    width: 100%;
+    padding: 10px;
+    background-color: #01a406b0;
+    color: white;
+    border: solid;
+    border-color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    opacity: 1.5;
+    box-shadow: 10px 15px 6px 1px rgba(0, 0, 0, 0.267);
+}
+
+.buttonfeedback:hover {
+    background-color: #ffffffbd;
+    color: green;
+    border-color: green;
+    opacity: 1.5;
+    transition: box-shadow 0.3s ease, transform 0.1s ease;
+    box-shadow: 10px 15px 6px 1px rgba(86, 255, 34, 0.45);
+}
+
+.inputbox3 {
+    background-color: #ffffffe4;
+    transition: box-shadow 0.3s ease;
+    padding: 2px 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    caret-color: black;
+    outline: none;
+    width: 100%;
+    max-width: 200px;
+    font-family: 'Arial', sans-serif;
+    border-color: #00d13f;
+}
+
+.inputbox3:hover {
+    border: 2px solid #ccc;
+    background: linear-gradient(145deg, #f3f3f3, #ffffff);
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+    caret-color: black;
+    outline: none;
+    width: 100%;
+    border-color: #33b5ff;
+}
+
+.inputbox3:focus {
+    transform: scale(1.45);
+    outline: none;
+    padding: 2px 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background: linear-gradient(145deg, #f3f3f3, #e2e2e2);
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+    caret-color: black;
+    width: 100%;
+    max-width: 200px;
+    font-family: 'Arial', sans-serif;
+    border-color: #532dffe9;
+}
+
+.inputbox3::placeholder {
+    color: #414141e2;
+    width: 170px;
+    font-style: italic;
+    font-family: cursive;
+}
+
+.textareafeedback {
+    background-color: #ffffffe4;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    caret-color: black;
+    outline: none;
+    max-width: 500px;
+    font-family: 'Arial', sans-serif;
+    border-color: #00d13f;
+}
+
+.textareafeedback:hover {
+    border: 2px solid #ccc;
+    background: linear-gradient(145deg, #f3f3f3, #ffffff);
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+    caret-color: black;
+    outline: none;
+    border-color: #33b5ff;
+}
+
+.textareafeedback:focus {
+    transition: box-shadow 0.3s ease;
+    transform: scale(1.45);
+    outline: none;
+    padding: 2px 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background: linear-gradient(145deg, #f3f3f3, #e2e2e2);
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+    caret-color: black;
+    width: 100%;
+    max-width: 200px;
+    font-family: 'Arial', sans-serif;
+    border-color: #532dffe9;
+}
+
+.textareafeedback::placeholder {
+    color: #414141e2;
+    width: 170px;
+    font-style: italic;
+    font-family: cursive;
+}
+
+.sendicon {
+    margin-top: -13%;
+    margin-left: 23%;
+}

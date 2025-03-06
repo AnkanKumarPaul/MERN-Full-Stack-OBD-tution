@@ -1,0 +1,40 @@
+.tableuserregistration {
+    background-color: rgba(2, 133, 255, 0.58);
+    width: 45%;
+    margin-left: 27%;
+    border-radius: 46%;
+    text-align: center;
+}
+
+.tableheaduserregistration {
+    color: white;
+    text-align: center;
+    font-size: larger;
+}
+
+.h1userregistration {
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bolder;
+    color: rgb(151, 0, 0);
+}
+
+.registrationSwitchin {
+    text-align: center;
+    margin-top: 2%;
+    padding: 5px 5px;
+    color: rgb(1, 214, 1);
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    border-radius: 60%;
+    border-color: rgb(255, 136, 0);
+}
+
+.registrationSwitchin:hover {
+    font-size: small;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-color: rgb(1, 214, 1);
+    color: rgb(255, 136, 0);
+    border-radius: 20%;
+}

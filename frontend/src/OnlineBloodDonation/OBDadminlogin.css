@@ -1,0 +1,117 @@
+.anchor {
+    transition: transform 0.50s ease, opacity 0.50s ease, box-shadow 0.60s ease;
+}
+
+.anchor:hover {
+    opacity: 1.5;
+    box-shadow: 5px 2px 20px 20px rgba(255, 255, 255, 0.589);
+}
+
+.anchorregister{
+    box-shadow: 5px 2px 20px 20px rgba(4, 255, 0, 0.434);
+}
+
+.anchorforget{
+    box-shadow: 5px 2px 20px 20px rgba(250, 102, 102, 0.434);
+}
+
+.submit {
+    transition: transform 0.50s ease, opacity 0.50s ease, box-shadow 0.60s ease;
+}
+
+.submit:hover {
+    opacity: 1.5;
+    box-shadow: 5px 2px 20px 20px rgba(255, 255, 255, 0.589);
+} 
+
+.h1login {
+    text-align: center;
+    /* margin-top: 3%; */
+    font-size: xx-large;
+    font-weight: bolder;
+    color: brown;
+}
+
+.tableloginadmin {
+    background-color: rgba(110, 2, 225, 0.505);
+    width: 45%;
+    margin-left: 27%;
+    margin-top: 5%;
+    padding: 10px;
+    border: solid;
+    border-color: rgb(255, 255, 255);
+    text-align: center;
+    border-radius: 60px;
+}
+
+.tableheadlogin {
+    text-align: center;
+    color: yellow;
+    font-size: larger;
+}
+
+.registrationSwitchlogin {
+    text-align: center;
+    margin-top: 2%;
+}
+
+.adminregisterlogin {
+    list-style: none;
+    margin-top: 4%;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    background: rgb(10, 184, 7);
+    font-size: larger;
+    font-family: cursive;
+}
+
+.adminregisterlogin:hover {
+    color: rgb(10, 184, 7);
+    font-size: x-large;
+    background: white;
+    font-family: fantasy;
+}
+
+.adminregisterforget {
+    list-style: none;
+    margin-top: 4%;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    background: red;
+    font-size: larger;
+    font-family: cursive;
+}
+
+.adminregisterforget:hover {
+    color: red; 
+    font-size: x-large;
+    background: white;
+    font-family: fantasy;
+}
+
+.showHideuser {
+    margin-left: 1%;
+    font-size: larger;
+    cursor: pointer;
+}
+
+.showHideuser:hover {
+    font-size: x-large;
+    color: brown;
+}
+
+.userloginshowhide {
+    text-decoration: none;
+    color: white;
+    margin-left: 1%;
+    font-size: larger;
+    cursor: pointer;
+}
+
+.userloginshowhide:hover {
+    text-decoration: none;
+    color: white;
+    /* font-size: x-large; */
+}

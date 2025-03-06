@@ -1,0 +1,38 @@
+/* .donationbody{
+    background-image: url(https://thumbs.dreamstime.com/z/donation-money-mini-people-donate-to-box-group-donors-give-can-use-web-banner-infographics-hero-images-145228452.jpg);
+} */
+
+.paygateh1 {
+    text-align: center;
+    margin-top: 3%;
+}
+
+.paygatedonatebutton {
+    margin-left: 43%;
+    border: solid;
+    background-color: white;
+    color: rgb(0, 110, 255);
+    border-radius: 15%;
+    border-left: 1px solid red;
+    border-right-color: aqua;
+    border-top: 1px solid violet;
+    border-bottom-color: gold;
+    font-size: larger;
+    font-family: cursive;
+    padding: 2px 4px 4px 2px;
+    transition: transform 0.50s ease, opacity 0.50s ease, box-shadow 0.30s ease;
+    box-shadow: 5px 2px 20px 20px rgba(94, 249, 105, 0.589);
+}
+
+.paygatedonatebutton:hover {
+    margin-left: 43%;
+    border: solid;
+    border-radius: 15%;
+    border-left: 1px solid blue;
+    border-right-color: gold;
+    border-top: 1px solid #00cb2c;
+    border-bottom-color: blue;
+    color: #06ad2a;
+    opacity: 1.5;
+    box-shadow: 5px 2px 20px 20px rgba(255, 255, 255, 0.589);
+}

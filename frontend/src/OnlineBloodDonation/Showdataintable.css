@@ -1,0 +1,77 @@
+.datatable {
+    margin-top: 10%;
+}
+
+.editbutton {
+    margin-top: 10%;
+    padding: 5px 15px;
+    color: rgb(229, 150, 2);
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    background-color: white;
+    border-radius: 30%;
+    border-color: blueviolet;
+}
+
+.editbutton:hover { 
+    font-size: small;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 60%;
+    border-color: violet;
+}
+
+.deletebutton {
+    margin-top: 10%;
+    padding: 5px 5px;
+    color: red;
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    background-color: whitesmoke;
+    border-radius: 60%;
+    margin-left: 2.7%;
+    border-color: brown;
+}
+
+.deletebutton:hover {
+    font-size: small;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-color: red;
+    border-radius: 20%;
+}
+
+.tablehead {
+    background-color: #fbff04a1;
+    width: 45%;
+    margin-left: 27%;
+    margin-top: 5%;
+    /* padding: 10px 50px; */
+    border: solid;
+    border-color: red;
+    text-align: center;
+    color: blue;
+}
+
+.alldata {
+    margin-top: 10%;
+    /* text-align: center; */
+}
+
+.donornametable {
+    text-align: center;
+    width: 60%;
+    margin-left: 25%;
+    /* background-color: rgba(0, 0, 255, 0.477); */
+    color: white;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: cursive;
+}
+
+.forusertablemessage {
+    color: red;
+    font-size: x-large;
+    font-weight: lighter;
+    font-family: 'Courier New', Courier, monospace;
+}
