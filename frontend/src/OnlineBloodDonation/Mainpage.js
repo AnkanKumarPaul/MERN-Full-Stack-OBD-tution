@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
-
+import Swal from 'sweetalert2';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDroplet, faRightFromBracket, faUserDoctor, faSearch, faUser, faHospitalUser, faAddressCard, faTable, faCircleInfo, faHandHoldingMedical, faArrowLeft, faArrowRight, faEnvelope, faPhone, faCircleDollarToSlot, faUserTie } from '@fortawesome/free-solid-svg-icons';
 import logoutpic from "./logout.png";  // Your logout image
