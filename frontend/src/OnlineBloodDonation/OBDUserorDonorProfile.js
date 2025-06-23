@@ -19,7 +19,7 @@ function OBDUserorDonorProfile() {
   const getData = async () => {
     const email = localStorage.getItem('loggedDonor');
     if (email) {
-      const response = await fetch('http://localhost:5000/getDonerByEmail/' + email);
+      const response = await fetch('https://mern-full-stack-obd-tution-backend.onrender.com/getDonerByEmail/' + email);
       const data = await response.json();
       setAlldonors(data);
     }
@@ -29,7 +29,7 @@ function OBDUserorDonorProfile() {
   const getDataofuser = async () => {
     const email = localStorage.getItem('loggedUser');
     if (email) {
-      const response = await fetch('http://localhost:5000/getUserByEmail/' + email);
+      const response = await fetch('https://mern-full-stack-obd-tution-backend.onrender.com/getUserByEmail/' + email);
       const data = await response.json();
       setAlluser(data);
     }
@@ -51,7 +51,7 @@ function OBDUserorDonorProfile() {
         headers: { 'Content-Type': 'application/json' },
       };
 
-      const response = await fetch('http://localhost:5000/deletedonor/' + id, requestOptions);
+      const response = await fetch('https://mern-full-stack-obd-tution-backend.onrender.com/deletedonor/' + id, requestOptions);
 
       alert("Deleted Donor data Successfully");
       window.location.reload();
@@ -66,7 +66,7 @@ function OBDUserorDonorProfile() {
         headers: { 'Content-Type': 'application/json' },
       };
 
-      const response = await fetch('http://localhost:5000/deleteuser/' + id, requestOptions);
+      const response = await fetch('https://mern-full-stack-obd-tution-backend.onrender.com/deleteuser/' + id, requestOptions);
 
       alert("Deleted User data Successfully");
       window.location.reload();
@@ -121,7 +121,7 @@ function OBDUserorDonorProfile() {
         body: JSON.stringify(product)
       };
 
-      const response = await fetch(`http://localhost:5000/updatedonor/${donorid}`, requestOptions);
+      const response = await fetch(`https://mern-full-stack-obd-tution-backend.onrender.com/updatedonor/${donorid}`, requestOptions);
       const data = await response.json();
 
       if (data._id != null) {
@@ -169,7 +169,7 @@ function OBDUserorDonorProfile() {
         body: JSON.stringify(product)
       };
 
-      const response = await fetch(`http://localhost:5000/updateuser/${userid}`, requestOptions);
+      const response = await fetch(`https://mern-full-stack-obd-tution-backend.onrender.com/updateuser/${userid}`, requestOptions);
       const data = await response.json();
 
       if (data._id != null) {
@@ -198,7 +198,7 @@ function OBDUserorDonorProfile() {
       body: JSON.stringify(product)
     }
 
-    const response = await fetch(`http://localhost:5000/updateDonor/${donorid}`, requestOptions);
+    const response = await fetch(`https://mern-full-stack-obd-tution-backend.onrender.com/updateDonor/${donorid}`, requestOptions);
     const data = await response.json();
 
     if (data._id != null) {
@@ -223,7 +223,7 @@ function OBDUserorDonorProfile() {
       body: JSON.stringify(product)
     }
 
-    const response = await fetch(`http://localhost:5000/updateuser/${userid}`, requestOptions);
+    const response = await fetch(`https://mern-full-stack-obd-tution-backend.onrender.com/updateuser/${userid}`, requestOptions);
     const data = await response.json();
 
     if (data._id != null) {
