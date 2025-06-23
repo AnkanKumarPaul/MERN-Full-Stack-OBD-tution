@@ -16,15 +16,10 @@ function OBDSearch() {
     const [feedbackData, setFeedbackData] = useState([]);
     const navigate = useNavigate(); // Initialize navigate hook
 
-    useEffect(() => {
-    getData();
-}, []);
-
     
     const getData = async () => {
         const response = await fetch('https://mern-full-stack-obd-tution-backend.onrender.com/getAlldonor');
         const data = await response.json();
-        console.log("Donor data fetched:", data);
         setAlldonors(data);
     };
 
