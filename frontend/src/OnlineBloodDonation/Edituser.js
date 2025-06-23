@@ -33,7 +33,7 @@ function Edituser() {
             body: JSON.stringify(new_user)
         };
 
-        const response = await fetch(`http://localhost:5000/updateuser/${id}`, requestOptions);
+        const response = await fetch(`https://mern-full-stack-obd-tution-backend.onrender.com/updateuser/${id}`, requestOptions);
         const data = await response.json();
 
         if (data._id != null) {
@@ -46,7 +46,7 @@ function Edituser() {
     }
 
     const getDatabyId = async (id) => {
-        const response = await fetch('http://localhost:5000/getAlluser/' + id)
+        const response = await fetch('https://mern-full-stack-obd-tution-backend.onrender.com/getAlluser/' + id)
         const data = await response.json();
         setName(data.name)
         setPassword(data.password)
