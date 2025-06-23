@@ -36,7 +36,7 @@ function OBDDonorregistraion() {
     //         body: JSON.stringify(new_donor)
     //     };
 
-    //     const response = await fetch('http://localhost:5000/registerdonor', requestOptions);
+    //     const response = await fetch('https://mern-full-stack-obd-tution-backend.onrender.com/registerdonor', requestOptions);
     //     const data = await response.json();
 
     //     if (data._id != null) {
@@ -53,7 +53,7 @@ function OBDDonorregistraion() {
     // }
 
     const checkdonorEmailExistence = async (email) => {
-        const response = await fetch(`http://localhost:5000/checkdonorEmail/${email}`);
+        const response = await fetch(`https://mern-full-stack-obd-tution-backend.onrender.com/checkdonorEmail/${email}`);
         const data = await response.json();
 
         if (data.exists) {
@@ -88,7 +88,7 @@ function OBDDonorregistraion() {
             body: JSON.stringify(new_donor)
         };
 
-        const response = await fetch('http://localhost:5000/registerdonor', requestOptions);
+        const response = await fetch('https://mern-full-stack-obd-tution-backend.onrender.com/registerdonor', requestOptions);
         const data = await response.json();
 
         if (data._id != null) {
