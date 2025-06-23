@@ -39,7 +39,7 @@ function OBDSearch() {
                 body: JSON.stringify(byaddressandblooddonor)
             };
 
-            const response = await fetch('http://localhost:5000/searchbybothdonor', requestOptions);
+            const response = await fetch('https://mern-full-stack-obd-tution-backend.onrender.com/searchbybothdonor', requestOptions);
             const data1 = await response.json();
             setAlldonors(data1);
         }
@@ -50,7 +50,7 @@ function OBDSearch() {
         if (value == null || value === "") {
             getData();
         } else {
-            const response = await fetch(`http://localhost:5000/searchbybloodgroup/${value}`);
+            const response = await fetch(`https://mern-full-stack-obd-tution-backend.onrender.com/searchbybloodgroup/${value}`);
             const data1 = await response.json();
             setAlldonors(data1);
         }
