@@ -17,7 +17,7 @@ function OBDSearch() {
     const navigate = useNavigate(); // Initialize navigate hook
 
     const getData = async () => {
-        const response = await fetch('http://localhost:5000/getAlldonor');
+        const response = await fetch('https://mern-full-stack-obd-tution-backend.onrender.com/getAlldonor');
         const data = await response.json();
         setAlldonors(data);
     };
@@ -91,7 +91,7 @@ function OBDSearch() {
             body: JSON.stringify(new_popupdata)
         };
 
-        const response = await fetch('http://localhost:5000/registerpopupdata', requestOptions);
+        const response = await fetch('https://mern-full-stack-obd-tution-backend.onrender.com/registerpopupdata', requestOptions);
         const data = await response.json();
 
         if (data._id != null) {
