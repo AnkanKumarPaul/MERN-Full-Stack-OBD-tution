@@ -51,7 +51,7 @@ function OBDUserforgetpassword() {
             body: JSON.stringify(new_donor)
         };
 
-        const response = await fetch('http://localhost:5000/checkmail', requestOptions);
+        const response = await fetch('https://mern-full-stack-obd-tution-backend.onrender.com/checkmail', requestOptions);
         const data = await response.json();
 
         if (data.length > 0) {
@@ -97,7 +97,7 @@ function OBDUserforgetpassword() {
 
         if (newpassword == cpassword) {
 
-            const response = await fetch('http://localhost:5000/updateUserByEmail/' + email, requestOptions);
+            const response = await fetch('https://mern-full-stack-obd-tution-backend.onrender.com/updateUserByEmail/' + email, requestOptions);
             const data = await response.json();
 
             console.log(52, data)
@@ -130,7 +130,7 @@ function OBDUserforgetpassword() {
             body: JSON.stringify(pass)
         };
 
-        const response = await fetch('http://localhost:5000/user-otp-send-email', requestOptions);
+        const response = await fetch('https://mern-full-stack-obd-tution-backend.onrender.com/user-otp-send-email', requestOptions);
         const data = await response.json();
 
 
