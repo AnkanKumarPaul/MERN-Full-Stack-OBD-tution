@@ -12,7 +12,7 @@ function OBDDonorBloodReqAccDec() {
     const getData = async () => {
         const donorid = localStorage.getItem('loggedDonor');
         console.log(20, donorid);
-        const response = await fetch('http://localhost:5000/getAllrequestbydonoremailid/' + donorid);
+        const response = await fetch('https://mern-full-stack-obd-tution-backend.onrender.com/getAllrequestbydonoremailid/' + donorid);
         const data = await response.json();
         console.log(22, data);
         setAlldonors(data);
@@ -23,7 +23,7 @@ function OBDDonorBloodReqAccDec() {
     const getDatatwo = async () => {
         const email = localStorage.getItem('loggedDonor');
         if (email) {
-            const response = await fetch('http://localhost:5000/getDonerByEmail/' + email);
+            const response = await fetch('https://mern-full-stack-obd-tution-backend.onrender.com/getDonerByEmail/' + email);
             const datatwo = await response.json();
             setAlldonorstwo(datatwo);
         }
@@ -41,7 +41,7 @@ function OBDDonorBloodReqAccDec() {
             body: JSON.stringify(newdata)
         };
 
-        const response = await fetch(`http://localhost:5000/updateStatusofuserblood/${reqid}`, requestOptions)
+        const response = await fetch(`https://mern-full-stack-obd-tution-backend.onrender.com/updateStatusofuserblood/${reqid}`, requestOptions)
         const data = await response.json();
         window.location.href = ""
     }
@@ -56,7 +56,7 @@ function OBDDonorBloodReqAccDec() {
             body: JSON.stringify(newdata)
         };
 
-        const response = await fetch(`http://localhost:5000/updateStatusofuserblood/${reqid}`, requestOptions)
+        const response = await fetch(`https://mern-full-stack-obd-tution-backend.onrender.com/updateStatusofuserblood/${reqid}`, requestOptions)
         //const data = await response.json();
         window.location.href = ""
     }
