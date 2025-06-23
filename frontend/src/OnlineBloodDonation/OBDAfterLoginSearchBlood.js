@@ -16,7 +16,7 @@ function OBDAfterLoginSearchBlood() {
     const [donorid, setdonorid] = useState('')
     const [donatedate, setDonatedate] = useState('')
     const getData = async () => {
-        const response = await fetch('http://localhost:5000/getAlldonor');
+        const response = await fetch('https://mern-full-stack-obd-tution-backend.onrender.com/getAlldonor');
         const data = await response.json();
         setAlldonors(data);
     };
@@ -26,7 +26,7 @@ function OBDAfterLoginSearchBlood() {
     //     if (value == null || value === "") {
     //         getData();
     //     } else {
-    //         const response = await fetch(`http://localhost:5000/searchbybloodgroup/${value}`);
+    //         const response = await fetch(`https://mern-full-stack-obd-tution-backend.onrender.com/searchbybloodgroup/${value}`);
     //         const data1 = await response.json();
     //         setAlldonors(data1);
     //     }
@@ -44,7 +44,7 @@ function OBDAfterLoginSearchBlood() {
         if (value == null || value === "") {
             getData();
         } else {
-            const response = await fetch(`http://localhost:5000/searchbybloodgroup/${value}`);
+            const response = await fetch(`https://mern-full-stack-obd-tution-backend.onrender.com/searchbybloodgroup/${value}`);
             const data1 = await response.json();
             setAlldonors(data1);
         }
@@ -67,7 +67,7 @@ function OBDAfterLoginSearchBlood() {
                 body: JSON.stringify(byaddressandblooddonor),
             };
 
-            const response = await fetch('http://localhost:5000/searchbybothdonor', requestOptions);
+            const response = await fetch('https://mern-full-stack-obd-tution-backend.onrender.com/searchbybothdonor', requestOptions);
             const data1 = await response.json();
             setAlldonors(data1);
         }
@@ -98,14 +98,14 @@ function OBDAfterLoginSearchBlood() {
                 body: JSON.stringify(request_blood)
             };
 
-            const response = await fetch('http://localhost:5000/checkRequest', requestOptions);
+            const response = await fetch('https://mern-full-stack-obd-tution-backend.onrender.com/checkRequest', requestOptions);
             const data = await response.json();
 
             console.log(144, data.length);
 
             if (data.length === 0) {
 
-                const response1 = await fetch('http://localhost:5000/requestbutton', requestOptions);
+                const response1 = await fetch('https://mern-full-stack-obd-tution-backend.onrender.com/requestbutton', requestOptions);
                 const data1 = await response1.json();
 
                 //ei if ta ki kaj korche? 
