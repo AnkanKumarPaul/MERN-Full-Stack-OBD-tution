@@ -39,7 +39,7 @@ function OBDadminlogin() {
             body: JSON.stringify(new_user)
         };
 
-        const response = await fetch('http://localhost:5000/loginadmin', requestOptions);
+        const response = await fetch('https://mern-full-stack-obd-tution-backend.onrender.com/loginadmin', requestOptions);
         const data = await response.json();
 
         if (data.message === true) {
