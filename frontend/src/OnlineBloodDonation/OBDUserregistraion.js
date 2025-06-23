@@ -34,7 +34,7 @@ function OBDUserregistraion() {
     //         body: JSON.stringify(new_user)
     //     };
 
-    //     const response = await fetch('http://localhost:5000/registeruser', requestOptions);
+    //     const response = await fetch('https://mern-full-stack-obd-tution-backend.onrender.com/registeruser', requestOptions);
     //     const data = await response.json();
 
     //     if (data._id != null) {
@@ -51,7 +51,7 @@ function OBDUserregistraion() {
     // }
 
     const checkuserEmailExistence = async (email) => {
-        const response = await fetch(`http://localhost:5000/checkuserEmail/${email}`);
+        const response = await fetch(`https://mern-full-stack-obd-tution-backend.onrender.com/checkuserEmail/${email}`);
         const data = await response.json();
 
         if (data.exists) {
@@ -86,7 +86,7 @@ function OBDUserregistraion() {
             body: JSON.stringify(new_user)
         };
 
-        const response = await fetch('http://localhost:5000/registeruser', requestOptions);
+        const response = await fetch('https://mern-full-stack-obd-tution-backend.onrender.com/registeruser', requestOptions);
         const data = await response.json();
 
         if (data._id != null) {
